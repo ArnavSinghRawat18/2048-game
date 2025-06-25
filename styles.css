@@ -6,17 +6,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
-}
-
 :root {
   --bg: #1a1a1d;
   --text: #fff;
@@ -29,10 +18,23 @@ body.light {
   --tile-text: #000;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  touch-action: manipulation;
+}
+
 .game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
 }
 
 .theme-toggle {
@@ -53,7 +55,7 @@ body.light {
   background-color: #333;
   padding: 10px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
 
@@ -70,6 +72,7 @@ body.light {
   border-radius: 10px;
   transition: all 0.2s ease;
   animation: pop 0.2s ease;
+  touch-action: manipulation;
 }
 
 @keyframes pop {
@@ -81,17 +84,29 @@ body.light {
   }
 }
 
-.tile-2    { background-color: #1976d2; }
-.tile-4    { background-color: #0288d1; }
-.tile-8    { background-color: #388e3c; }
-.tile-16   { background-color: #fbc02d; }
-.tile-32   { background-color: #f57c00; }
-.tile-64   { background-color: #e53935; }
-.tile-128  { background-color: #8e24aa; }
-.tile-256  { background-color: #5e35b1; }
-.tile-512  { background-color: #3949ab; }
+.tile-2 { background-color: #1976d2; }
+.tile-4 { background-color: #0288d1; }
+.tile-8 { background-color: #388e3c; }
+.tile-16 { background-color: #fbc02d; }
+.tile-32 { background-color: #f57c00; }
+.tile-64 { background-color: #e53935; }
+.tile-128 { background-color: #8e24aa; }
+.tile-256 { background-color: #5e35b1; }
+.tile-512 { background-color: #3949ab; }
 .tile-1024 { background-color: #009688; }
 .tile-2048 { background-color: #c62828; }
+
+.swipe-tip {
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .swipe-tip {
+    display: none;
+  }
+}
 
 .game-info {
   text-align: center;
