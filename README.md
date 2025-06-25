@@ -21,4 +21,7 @@ A mobile-friendly, theme-toggleable version of the classic **2048 game**, built 
 ---
 
 ## 📂 Project Structure
-
+├── index.html # Main HTML structure
+├── styles.css # Styling and responsiveness
+├── script.js # Game logic and controls
+└── README.md # Project documentation
