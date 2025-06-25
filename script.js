@@ -89,7 +89,7 @@ function mergeLine(line) {
   return line;
 }
 
-// Arrow key movement
+// Keyboard arrow movement
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "ArrowUp": move("up"); break;
@@ -98,6 +98,36 @@ document.addEventListener("keydown", (e) => {
     case "ArrowRight": move("right"); break;
   }
 });
+
+// Touch controls for mobile
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+board.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, false);
+
+board.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  touchEndY = e.changedTouches[0].clientY;
+  handleGesture();
+}, false);
+
+function handleGesture() {
+  const dx = touchEndX - touchStartX;
+  const dy = touchEndY - touchStartY;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    if (dx > 30) move("right");
+    else if (dx < -30) move("left");
+  } else {
+    if (dy > 30) move("down");
+    else if (dy < -30) move("up");
+  }
+}
 
 // Restart game
 restartButton.addEventListener("click", initializeGame);
