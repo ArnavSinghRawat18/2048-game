@@ -13,8 +13,8 @@ A responsive and theme-toggleable version of the classic **2048 puzzle game**, b
 
 ## 🚀 Live Demo
 
-[🔗 Click here to play the game](#)  
-(Replace with your GitHub Pages or Netlify link)
+[[🔗 Click here to play the game](#) ](https://2048arnavsinghrawat.netlify.app/) 
+
 
 ## 📸 Screenshots
 
