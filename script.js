@@ -89,7 +89,7 @@ function mergeLine(line) {
   return line;
 }
 
-// Keyboard arrow movement
+// Arrow key movement
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "ArrowUp": move("up"); break;
@@ -99,20 +99,20 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Touch controls for mobile
+// Touch support for mobile
 let touchStartX = 0;
 let touchStartY = 0;
 let touchEndX = 0;
 let touchEndY = 0;
 
-board.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
-  touchStartY = e.touches[0].clientY;
+document.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+  touchStartY = e.changedTouches[0].screenY;
 }, false);
 
-board.addEventListener("touchend", (e) => {
-  touchEndX = e.changedTouches[0].clientX;
-  touchEndY = e.changedTouches[0].clientY;
+document.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  touchEndY = e.changedTouches[0].screenY;
   handleGesture();
 }, false);
 
@@ -129,7 +129,7 @@ function handleGesture() {
   }
 }
 
-// Restart game
+// Restart button
 restartButton.addEventListener("click", initializeGame);
 
 // Theme toggle
