@@ -4,8 +4,8 @@ A mobile-friendly, theme-toggleable version of the classic **2048 game**, built 
 
 ## 📱 Live Demo
 
-👉 [Live Link Here](#https://2048arnavsinghrawat.netlify.app/)  
-(Replace with GitHub Pages or Netlify link)
+👉 [[Live Link Here](#https://2048arnavsinghrawat.netlify.app/)  
+](https://2048arnavsinghrawat.netlify.app/)(Replace with GitHub Pages or Netlify link)
 
 ---
 
