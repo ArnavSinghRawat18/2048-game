@@ -28,7 +28,7 @@ function addRandomTile() {
   if (emptyTiles.length === 0) return;
   const randomTile = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
   randomTile.dataset.value = Math.random() < 0.9 ? 2 : 4;
-  randomTile.classList.add('tile'); // triggers pop animation
+  randomTile.classList.add('tile');
 }
 
 function updateBoard() {
@@ -99,7 +99,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Touch support for mobile
+// Touch support
 let touchStartX = 0;
 let touchStartY = 0;
 let touchEndX = 0;
@@ -129,10 +129,8 @@ function handleGesture() {
   }
 }
 
-// Restart button
+// Button Events
 restartButton.addEventListener("click", initializeGame);
-
-// Theme toggle
 themeToggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light");
 });
