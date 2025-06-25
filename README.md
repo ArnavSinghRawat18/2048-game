@@ -1,37 +1,25 @@
-# 🎮 2048 Game – Built by Arnav Singh Rawat
+# 🎮 2048 Game – by Arnav Singh Rawat
 
-A responsive and theme-toggleable version of the classic **2048 puzzle game**, built using **HTML**, **CSS**, and **JavaScript**. Includes animated tile merges, dark/light mode switching, and a clean, mobile-friendly layout.
+A mobile-friendly, theme-toggleable version of the classic **2048 game**, built using **HTML**, **CSS**, and **JavaScript**. Includes touch support, animations, and responsive layout — playable on desktop and mobile!
 
-## 🌟 Features
+## 📱 Live Demo
 
-- 🎨 **Dark / Light Theme Toggle**
-- 🧠 **Classic 2048 Game Logic**
-- 💥 **Animated Merging Tiles**
-- 📱 **Mobile-Responsive Design**
-- 🕹️ **Keyboard Arrow Key Support**
+👉 [Live Link Here](#https://2048arnavsinghrawat.netlify.app/)  
+(Replace with GitHub Pages or Netlify link)
+
+---
+
+## 🔥 Features
+
+- 🌓 **Dark/Light Theme Toggle**
+- 🧠 **Classic 2048 Merging Logic**
+- 🎯 **Touch Swipe Support for Mobile**
+- 🖱️ **Arrow Key Controls for Desktop**
+- 📱 **Fully Responsive Design**
+- 🎨 **Animated Tile Transitions**
 - 🔄 **Restart Button**
 
-## 🚀 Live Demo
-
-[[🔗 Click here to play the game](#) ](https://2048arnavsinghrawat.netlify.app/) 
-
-
-## 📸 Screenshots
-
-![Dark Mode Preview](screenshots/dark-mode.png)  
-![Light Mode Preview](screenshots/light-mode.png)
-
-## 🛠️ Technologies Used
-
-- **HTML5** for structure
-- **CSS3** for styling and animations
-- **JavaScript** for game mechanics
+---
 
 ## 📂 Project Structure
-2048-game/
-│
-├── index.html # HTML structure
-├── styles.css # All styling (themes + tiles)
-├── script.js # Core game logic
-└── README.md # You're reading it!
 
