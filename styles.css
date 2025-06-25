@@ -18,6 +18,10 @@ body.light {
   --tile-text: #000;
 }
 
+html, body {
+  touch-action: manipulation;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -27,7 +31,6 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: background 0.3s, color 0.3s;
-  touch-action: manipulation;
 }
 
 .game-container {
@@ -76,23 +79,19 @@ body {
 }
 
 @keyframes pop {
-  0% {
-    transform: scale(0.7);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(0.7); }
+  100% { transform: scale(1); }
 }
 
-.tile-2 { background-color: #1976d2; }
-.tile-4 { background-color: #0288d1; }
-.tile-8 { background-color: #388e3c; }
-.tile-16 { background-color: #fbc02d; }
-.tile-32 { background-color: #f57c00; }
-.tile-64 { background-color: #e53935; }
-.tile-128 { background-color: #8e24aa; }
-.tile-256 { background-color: #5e35b1; }
-.tile-512 { background-color: #3949ab; }
+.tile-2    { background-color: #1976d2; }
+.tile-4    { background-color: #0288d1; }
+.tile-8    { background-color: #388e3c; }
+.tile-16   { background-color: #fbc02d; }
+.tile-32   { background-color: #f57c00; }
+.tile-64   { background-color: #e53935; }
+.tile-128  { background-color: #8e24aa; }
+.tile-256  { background-color: #5e35b1; }
+.tile-512  { background-color: #3949ab; }
 .tile-1024 { background-color: #009688; }
 .tile-2048 { background-color: #c62828; }
 
@@ -132,6 +131,12 @@ button:hover {
   background-color: #e65100;
 }
 
+.footer-text {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text);
+}
+
 @media (max-width: 500px) {
   .game-board {
     grid-template-columns: repeat(4, 60px);
@@ -147,5 +152,9 @@ button:hover {
   button {
     padding: 10px 20px;
     font-size: 14px;
+  }
+
+  .footer-text {
+    font-size: 12px;
   }
 }
