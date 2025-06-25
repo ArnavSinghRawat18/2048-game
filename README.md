@@ -28,4 +28,10 @@ A responsive and theme-toggleable version of the classic **2048 puzzle game**, b
 - **JavaScript** for game mechanics
 
 ## 📂 Project Structure
+2048-game/
+│
+├── index.html # HTML structure
+├── styles.css # All styling (themes + tiles)
+├── script.js # Core game logic
+└── README.md # You're reading it!
 
